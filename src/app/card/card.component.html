@@ -1,0 +1,17 @@
+<div class="pokemon-card">
+  <div class="pokemon-avatar">
+    <h2>{{ pokemon.id }}</h2>
+  </div>
+  {{ pokemon.name }}<br />
+  {{ pokemon.firstType
+  }}<span *ngIf="pokemon.secondType">/{{ pokemon.secondType }}</span>
+  <h3>Basic Status</h3>
+  <p>
+    HP: {{ pokemon.hp }}<br />
+    Attack: {{ pokemon.attack }}<br />
+    Defense: {{ pokemon.defense }}<br />
+  </p>
+  <button (click)="detailClicked()">
+    Detail
+  </button>
+</div>
